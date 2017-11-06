@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+     <title>BOARD</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/ bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+     <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    </head>
+    <body  >      
+        <div class="container">
+            <div class="row bg-inverse text-white"><h1  align="center" class="animated zoomInDown  ">Tablero Colaborativo</h1> </div>
+
+            <div class="row">
+                <div class="col bg-faded" >
+                    <div class="animated zoomInDown" align="center" id="output"></div>
+                    <canvas   class="animated zoomInDown " class="whitecan" id="myCanvas" width="300" height="300" style="position:relative; border: 3px solid ">
+                        
+                    </canvas>
+                </div>
+                <div  class="col bg-faded">
+
+                   <button name="btnsave" id="btnsave" type="button" class="ion-ios-download btn btn-success btn-lg  animated bounceInRight" onclick="Fsave()">
+                       Guardar</button>
+                    <button name="clear" type="button" class="md-trash btn btn-primary btn-lg animated bounceInRight" onclick="Fremove()">
+                        Borrar</button>
+                    <br>
+                    <br>
+                   <form name="brushForm" class="animated bounceInRight bg-faded">
+                        <p class="text-xl-left" >Seleccione un color para dibujar: <input class="form-control-md" 
+                           name="brushColor" type="color" id="brushColor" checked="true" value="#000002" style="inline: true;"></p>
+
+                        <p>Seleccione el tamaño del pincel:<select class="custom-select" name="brushSize">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="4">4</option>
+                                <option value="8">8</option>
+                                <option value="16">16</option>
+                                <option value="24">24</option>
+                            </select></p>
+                    </form>       
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="websocket.js"></script>
+        <script type="text/javascript" src="board.js"></script>
+    </body>
+</html>
+
+
